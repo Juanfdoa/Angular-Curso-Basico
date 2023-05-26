@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div>
+          {{i+1}} {{employee.name}} {{employee.surname}} {{employee.charge}} {{employee.salary}}
+          <a [routerLink]="['/update-employee', i]" [queryParams]="{action:'1'}">
+            Update
+          </a>
+          &nbsp;
+          <a [routerLink]="['/update-employee', i]" [queryParams]="{action:'2'}">
+            Delete
+          </a>
+        </div>
+        
+        <app-carateristics-employee-comp (employeeCarateristics)="addCarateristic($event)"></app-carateristics-employee-comp>
+        <ul style="list-style:none">
+          <li *ngFor="let carateristic of arrayCarateristics">{{carateristic}}</li>
+        </ul>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">{{title}}</h1>
+
+<form>
+    <input type="text" name="name" [(ngModel)]="name">
+    <input type="text" name="surname" [(ngModel)]="surname">
+    <input type="text" name="charge" [(ngModel)]="charge">
+    <input type="submit" value="register" (click)="UserRegister()">
+</form>
+
+<br/>
+
+<p *ngIf="registered; else withoutRegister">{{message}} Name:{{name}} {{surname}}, 
+   <!-- Charge:<span [ngStyle]="{color: charge=='Director'? 'red' : 'black'}">{{charge}}</span></p>-->
+    Charge:<span [ngClass]="{forDirector: charge=='Director'}">{{charge}}</span></p>
+
+<ng-template #withoutRegister>
+    <p>no-one registered </p>
+</ng-template>
+
+<br/>
+
+<ul>
+    <li *ngFor="let entrance of entrances; let i = index">
+        <span style="font-size:large; font-weight: bold;">{{ i+1 +' '+entrance.title}}</span>
+    </li>
+</ul>

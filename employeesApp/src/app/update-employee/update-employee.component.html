@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col">
+        <h1 style="text-align: center;">Update Employee</h1>
+
+        <Form class="form-group row">
+            <div class="form-group col-md-3">
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" id="name" placeholder="Name" class="form-control" [(ngModel)]="nameSpace">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="surname">Surname:</label><br>
+                <input type="text" name="surname" id="surname" placeholder="Surname" class="form-control" [(ngModel)]="surnameSpace">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="charge">Charge:</label><br>
+                <input type="text" name="charge" id="charge" placeholder="Charge" class="form-control" [(ngModel)]="chargeSpace">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Salary:</label><br>
+                <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control" [(ngModel)]="salarySpace">
+            </div>
+
+            <div class="col">
+                <button type="submit" class="btn btn-primary" (click)="UpdateEmployee()" style="margin: 10px;">Action</button>
+                <!--<button type="submit" class="btn btn-danger" (click)="DeleteEmployee()" style="margin: 10px;">Delete</button>-->
+            </div>
+
+        </Form>
+    </div>
+</div>

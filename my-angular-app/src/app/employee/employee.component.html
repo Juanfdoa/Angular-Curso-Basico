@@ -1,0 +1,17 @@
+<p>Employee name: {{name}}</p>
+<p>Employee surname: {{surname}}</p>
+<p>Employee age: {{age < 18? 'Menor de edad': 'Mayor de edad'}}</p>
+<p>Employee company: {{company}}</p>
+
+<!--Introduce your company: <input type="text" #company (keyup)="0" [disabled]="ableBox">  Property binding []-->
+Introduce your company: <input type="text" [(ngModel)]="company">                  <!--Two ways binding [()]-->
+<br/>
+<br/>
+<!--<input type="button" value="save!" (click)="saveCompany(company.value)"/>-->
+
+{{registerText}} <br/>
+Is Logged : <input type="radio" value="yes" name="register" id="logging"  (click)="setUserRegister($event)">   <!--Event binding ()-->
+Isn't Logged : <input type="radio" value="no" name="register" (click)="setUserRegister($event)">
+<br/>
+
+
